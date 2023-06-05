@@ -7,13 +7,9 @@ Contains Gradle and Android SDK
 ## Usage
 
 ```sh
-docker run --rm -it -v $PWD:/app/ -w /app le91688/android_apk_builder gradle build
+docker run --rm --volume $(pwd):/app/ -w /app ghcr.io/zetier/android_apk_builder:latest gradle build
 ```
 
-## Versioning
+## Tags
 
-Currently this image uses Gradle 6.5 and SDK 33, but hopefully more to come. Feel free to make a PR!
-
-## Dockerhub
-
-https://hub.docker.com/r/le91688/android_apk_builder
+Tags will be formatted as `gradle-<GRADLE_VERS>-sdk-<SDK_VERS>`
